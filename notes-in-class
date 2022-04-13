@@ -1,0 +1,38 @@
+regular expression:
+usage remove all digits
+str.replace(/[0-9]+/g,"";
+g:all occurrences
+i: case insensitive
+replace a pattern by a new string
+str.replace(/pattern/gi,"new string");
+
+str.replace(/[A-Z]+gi, "A";
+
++: 1 or more
+?: 0 or 1
+*: 0 or more
+
+^: on beginning/being - second usage: logic Not(within square bracket [ ] )
+task: remove all non-digits
+cardnumber.replace(/[^0-9]]/g,'');
+
+remove leading non-digits
+cardnumber.replace(/^[^0-9]/,'');
+
+. dot means any single char
+.*: everything
+
+(1) delete every following pattern
+str.replace(/pattern.*/,'');
+
+let username = string.replace(/@.*/,'');
+
+username = "43%%%%%fdg"
+let y = username.replace(/[a-b|[0-9]\-\_|_|.]/g,'');
+|: pipe means or
+\ is escape sequence for - hyphen
+valid username <===> y==''
+
+let domainname = string.replace(/[^@]+@/,''); replaces before@
+domainname.replace(/\.io/,'') != domainname <===> domainname contains ".io" <===> domainname.includes(".io")
+domainname.replace(/\.com|.gov|.edu|.tv|.io|.mil|.buz|.org/,'') != domainname <===> domainname.test(/\.io/,'') != domainname <===> domainname contains ".io" <===> domainname.includes(".io")
